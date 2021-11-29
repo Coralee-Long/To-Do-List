@@ -1,3 +1,7 @@
 .footer {
-	background-color: #4356b1 !important;
+	background-color: #2f2072 !important;
+}
+ul {
+	list-style-position: inside;
+	text-align: center;
 }
