@@ -25,7 +25,6 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px 40px;
-
 }
 
 #current-tasks-box {
@@ -51,3 +50,8 @@ justify-content: space-between;
 .task-line-LH p {
     padding-left: 15px;
 }
+
+.footer {
+	background-color: #4356b1 !important;
+}
+
