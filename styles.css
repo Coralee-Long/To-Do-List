@@ -19,3 +19,7 @@ body {
   height: 75px;
   padding: 15px 35px;
 }
+
+.footer {
+	background-color: #4356b1 !important;
+}
