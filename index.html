@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/8f821bd1b7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Listee</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <img
-        class="top-logo"
-        src="images/Listee-logo-cropped.png"
-        alt="Listee Logo"
-      />
+        <img class="top-logo" src="images/Listee-logo-cropped.png" alt="Listee Logo" />
     </header>
 
     <main>
-      <div class="columns">
+
+        <div class="columns">
         <div class="column" id="main-column">
           <!-- <div class="column" id="add-task-text">ADD NEW TASK:</div> -->
           <div class="box" id="add-task-box">
@@ -28,23 +26,157 @@
             </div>
             <button class="button is-success">+ Add Task</button>
           </div>
-          <div class="box" id="current-tasks-box">
-            CURRENT TASKS
-            <p>Sample task</p>
-            <p>Sample task</p>
-            <p>Sample task</p>
-          </div>
-          <div class="box" id="completed-tasks-box">
-            COMPLETED TASKS:
-            <p>Sample task</p>
-            <p>Sample task</p>
-            <p>Sample task</p>
-          </div>
+                <div class="tasks-flex">
+                    <div class="box" id="completed-tasks-box">
+                        CURRENT TASKS
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks-flex">
+                    <div class="box" id="current-tasks-box">
+                        COMPLETED TASKS
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box" id="task-line-item">
+                            <div class="task-line-LH">
+                                <button class="button is-success is-small" id="checkbox">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-check"></i>
+                                    </span>
+                                </button>
+                                <p>Sample task</p>
+                            </div>
+                            <div class="task-line-RH">
+                                <button class="button is-info is-small" id="edit-pen">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-marker"></i>
+                                    </span>
+                                </button>
+                                <button class="button is-danger is-small" id="delete">
+                                    <span class="icon is-small">
+                                        <i class="fa fa-trash"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        </div>
+        </div>
     </main>
 
-    <footer class="footer sticky-bottom ">
+<footer class="footer sticky-bottom ">
   <div class="has-text-centered">
     <p style = "color:#B0BDFF;">
       © 2021 Listee 
