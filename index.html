@@ -4,45 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css" />
     <title>Listee</title>
   </head>
 
   <body>
-    <header>
+
+
+  <main>
+    <div class="columns">
+        
+        <!-- LOGO -->
+        <div class="column is-mobile" id="logo-column">
       <img
         class="top-logo"
         src="images/Listee-logo-cropped.png"
         alt="Listee Logo"
       />
-    </header>
+        </div>
+        
+        <!-- MAIN STUFF -->
+        <div class="column is-mobile" id="main-column">
+          
+          <!-- add task -->
+          <div class="column" id="add-task-section">
+            
+            <h1 class="title is-2 has-text-light">Add new task:</h1>
 
-    <main>
-      <div class="columns">
-        <div class="column" id="main-column">
-          <!-- <div class="column" id="add-task-text">ADD NEW TASK:</div> -->
-          <div class="box" id="add-task-box">
-            ADD NEW TASK
-            <div class="input" type="text" placeholder="Enter text here">
-              Enter text here
-            </div>
-            <button class="button is-success">+ Add Task</button>
+            <div class="box" id="add-task-box pb-20">
+
+               <input
+              class="input is-large is-hovered"
+              type="text"
+              placeholder="Enter text here">
+                </input>
+            
+              <button class="button is-success is-medium is-pulled-right"><span>+ Add Task</span></button>
+              <br>
+              <br>
+              <br>
+              
+             
           </div>
+            
+        </div>
+
+        <!-- current tasks -->
           <div class="box" id="current-tasks-box">
             CURRENT TASKS
-            <p>Sample task</p>
+             <p>Sample task</p>
             <p>Sample task</p>
             <p>Sample task</p>
           </div>
+          <!-- completed tasks -->
           <div class="box" id="completed-tasks-box">
             COMPLETED TASKS:
             <p>Sample task</p>
             <p>Sample task</p>
             <p>Sample task</p>
           </div>
+
         </div>
-      </div>
-    </main>
+
+    </div>
+</main>
 
     <footer></footer>
   </body>
