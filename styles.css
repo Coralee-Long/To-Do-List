@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* border: 1px red solid; */
 }
 
 html {
@@ -20,37 +21,40 @@ body {
   padding: 15px 35px;
 }
 
+.button {
+  margin-top: 8px;
+}
+
 .tasks-flex {
-    display: flex;
-    justify-content: center;
-    padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
 }
 
 #current-tasks-box {
-    width: 50%;
-    padding: 20px 40px;
+  width: 50%;
+  padding: 20px 40px;
 }
 
 #completed-tasks-box {
-    width: 50%;
-    padding: 20px 40px;
+  width: 50%;
+  padding: 20px 40px;
 }
 
 #task-line-item {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .task-line-LH {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .task-line-LH p {
-    padding-left: 15px;
+  padding-left: 15px;
 }
 
 .footer {
-	background-color: #4356b1 !important;
+  background-color: #4356b1 !important;
 }
-
