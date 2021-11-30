@@ -16,7 +16,7 @@
   <main>
     <div class="columns">
         
-        <!-- LOGO -->
+<!-- LOGO (LEFT COLUMN) -->
         <div class="column is-mobile" id="logo-column">
       <img
         class="top-logo"
@@ -25,21 +25,17 @@
       />
         </div>
         
-        <!-- MAIN STUFF -->
+<!-- MAIN STUFF (RIGHT COLUMN) -->
         <div class="column is-mobile" id="main-column">
           
-          <!-- add task -->
+ <!-- ADD NEW TASK -->
           <div class="column" id="add-task-section">
             
             <h1 class="title is-2 has-text-light">Add new task:</h1>
 
-
             <div class="box" id="add-task-box pb-20">
 
-               <input
-              class="input is-large is-hovered"
-              type="text"
-              placeholder="Enter text here">
+               <input class="input is-large is-hovered" type="text" placeholder="Enter text here">
                 </input>
             
               <button class="button is-success is-medium is-pulled-right"><span>+ Add Task</span></button>
@@ -52,33 +48,12 @@
             
         </div>
 
+<!-- CURRENT TASKS -->
+        <div class="column" id="current-tasks-section">
+            
+            <h1 class="title is-2 has-text-light">Current tasks:</h1>
 
-        <!-- current tasks -->
-        <div class="tasks-flex">
-                    <div class="box" id="completed-tasks-box">
-                        CURRENT TASKS
-                        <div class="box" id="task-line-item">
-                            <div class="task-line-LH">
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-                                <p>Sample task</p>
-                            </div>
-                            <div class="task-line-RH">
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-                                <button class="button is-danger is-small" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
+                <div class="box" id="current-tasks-box pb-20">
 
                         <div class="box" id="task-line-item">
                             <div class="task-line-LH">
@@ -87,7 +62,7 @@
                                         <i class="fas fa-check"></i>
                                     </span>
                                 </button>
-                                <p>Sample task</p>
+                                <h3 class="title is-3">Sample task</p>
                             </div>
                             <div class="task-line-RH">
                                 <button class="button is-info is-small" id="edit-pen">
@@ -102,33 +77,19 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="box" id="task-line-item">
-                            <div class="task-line-LH">
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-                                <p>Sample task</p>
-                            </div>
-                            <div class="task-line-RH">
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-                                <button class="button is-danger is-small" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-                <div class="tasks-flex">
-                    <div class="box" id="current-tasks-box">
-                        COMPLETED TASKS
+            
+            </div>
+        
+
+<!-- COMPLETED TASKS -->
+        <div class="column" id="completed-tasks-section">
+            
+            <h1 class="title is-2 has-text-light">Completed tasks:</h1>
+
+                <div class="box" id="comple-tasks-box pb-20">
+
                         <div class="box" id="task-line-item">
                             <div class="task-line-LH">
                                 <button class="button is-success is-small" id="checkbox">
@@ -136,7 +97,7 @@
                                         <i class="fas fa-check"></i>
                                     </span>
                                 </button>
-                                <p>Sample task</p>
+                                <h3 class="title is-3">Sample task</p>
                             </div>
                             <div class="task-line-RH">
                                 <button class="button is-info is-small" id="edit-pen">
@@ -152,56 +113,17 @@
                             </div>
                         </div>
 
-                        <div class="box" id="task-line-item">
-                            <div class="task-line-LH">
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-                                <p>Sample task</p>
-                            </div>
-                            <div class="task-line-RH">
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-                                <button class="button is-danger is-small" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="box" id="task-line-item">
-                            <div class="task-line-LH">
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-                                <p>Sample task</p>
-                            </div>
-                            <div class="task-line-RH">
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-                                <button class="button is-danger is-small" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>   
-        </div>
+                </div>
+            
+            </div>
         
+        </div>
+
     </main>
 
+
+    <!-- FOOTER -->
+                
 <footer class="footer sticky-bottom ">
   <div class="has-text-centered">
     <p style = "color:#B0BDFF;">
