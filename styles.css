@@ -23,20 +23,49 @@ h2 {
 }
 
 h1 {
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: white;
 }
 
-.top-logo {
-  height: 75px;
-  padding: 15px 35px;
+h3 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  color: #4356b1;
+  margin: 10px;
+}
+
+#logo-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#logo {
+  width: 50%;
+  flex-grow: 0.1;
+  max-width: 450px;
+}
+
+#add-task-button {
+  margin-top: 10px;
+  /* margin-bottom: 100px; */
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgb(34, 172, 34);
 }
 
 .button {
-  margin-top: 10px;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
+  margin-right: 4px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  /* max-width: 800px; */
+  margin-top: 5px;
+  margin-bottom: 2px;
 }
 
 .tasks-flex {
@@ -59,31 +88,21 @@ h1 {
 #task-line-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.task-line-LH {
+.task-line-LH,
+.task-line-RH {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background: grey; */
 }
-
+/* 
 .task-line-LH p {
   padding-left: 15px;
-}
-
-.footer {
-  background-color: #4356b1 !important;
-}
-
-h1,
-h2 {
-  font-family: "Pacifico", "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-h1 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
+} */
 
 #add-task-box {
   background-color: #acff9f;
@@ -95,4 +114,8 @@ h1 {
 
 #add-task-text {
   color: #acff9f;
+}
+
+.footer {
+  background-color: #4356b1 !important;
 }
