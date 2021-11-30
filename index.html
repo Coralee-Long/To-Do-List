@@ -9,36 +9,28 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Listee</title>
 </head>
-
   <body>
-
-
   <main>
-    <div class="columns">
-        
-<!-- LOGO (LEFT COLUMN) -->
-        <div class="column is-mobile" id="logo-column">
-      <img
-        class="top-logo"
-        src="images/Listee-logo-cropped.png"
-        alt="Listee Logo"
-      />
-        </div>
-        
-<!-- MAIN STUFF (RIGHT COLUMN) -->
-        <div class="column is-mobile" id="main-column">
-          
- <!-- ADD NEW TASK -->
-          <div class="column" id="add-task-section">
+  
+
+    <!-- LOGO -->
+    <div class="columns is-centered" id='all-column'>
+
+        <div class="column is-mobile is-three-quarters " id="only-column">
+      <div id="logo-div"><img src="images/Listee-logo-cropped.png"
+        alt="Listee Logo" id="logo">
+      </div>
             
-            <h1 class="title is-2 has-text-light"><p id="add-task-text">Add new task:</p></h1>
+                  
+ <!-- ADD NEW TASK -->
+          <div class="column is-centered" id="add-task-section">
+            
+            <h1 id="add-task-text">Add new task:</h1>
 
             <div class="box" id="add-task-box">
-
-               <input class="input is-large is-hovered" type="text" placeholder="Enter text here">
+               <input class="input is-large is-hovered" type="text" placeholder="Enter text here" id="enter-task-input">
                 </input>
-            
-              <button class="button is-success is-medium is-pulled-right"><span>+ Add Task</span></button>
+              <button class="button is-success is-medium is-pulled-right" id="add-task-button"><span>+ Add Task</span></button>
               <br>
               <br>
               <br>
@@ -51,9 +43,11 @@
 <!-- CURRENT TASKS -->
         <div class="column" id="current-tasks-section">
             
-            <h1 class="title is-2 has-text-light">Current tasks:</h1>
+            <h1>Current tasks:</h1>
 
                 <div class="box" id="current-tasks-box">
+
+                <!-- SAMPLE TASK START -->
 
                         <div class="column" id="task-line-item">
                             <div class="task-line-LH">
@@ -77,6 +71,8 @@
                                 </button>
                             </div>
                         </div>
+
+                    <!-- SAMPLE TASK END -->
 
                 </div>
             
@@ -85,10 +81,10 @@
 
 <!-- COMPLETED TASKS -->
         <div class="column" id="completed-tasks-section">
-            
-            <h1 class="title is-2 has-text-light"><p id="completed-tasks-text">Completed tasks:</p></h1>
-
+            <h1 id="completed-tasks-text">Completed tasks:</h1>
                 <div class="box" id="completed-tasks-box">
+
+                        <!-- SAMPLE TASK START -->
 
                         <div class="column" id="task-line-item">
                             <div class="task-line-LH">
@@ -105,7 +101,7 @@
                                         <i class="fas fa-marker"></i>
                                     </span>
                                 </button>
-                                <button class="button is-danger is-small" id="delete">
+                                <button class="button is-danger is-small is-invert" id="delete">
                                     <span class="icon is-small">
                                         <i class="fa fa-trash"></i>
                                     </span>
@@ -113,14 +109,13 @@
                             </div>
                         </div>
 
+                        
+
+                        <!-- SAMPLE TASK END -->
                 </div>
-            
             </div>
-        
         </div>
-
     </main>
-
 
     <!-- FOOTER -->
                 
