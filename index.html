@@ -25,7 +25,9 @@
               id="add-task-input"
               placeholder="Type some text"
             />
-            <input class="button is-success is-pulled-right" type="submit" id="add-task-submit" value="+Add Task" />
+            <div id="add-task-button-box">
+            <input class="button is-success" type="submit" id="add-task-submit" value="+Add Task" />
+            </div>
           </form>
         </div>
       </section>
@@ -34,19 +36,34 @@
        <div id="current-task-header"><h2>Current tasks:</h1><p>Completed?</p></div>
         
         <div class="" id="current-box">
-<em id="default-current">Please add your first task above to see it here</em>         
-<!-- 
-                  <div class="task">
+          <div class="task" id="default-current">
+<em>Please add your first task above to see it here</em></div>         
+
+            <!-- <div class="task">
             <div class="task-text">
               <p>Sample Task Text</p>
+            </div>
+            <div class="task-actions">
+
+            <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
+            <button class="button is-success is-small is-light" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>
+
+            </div>
+          </div> -->
+
+                      <!-- <div class="task">
+            <div class="task-text">
+              <p>Sample Task this is it Text sample task text</p>
             </div>
             <div class="task-actions">
             <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
             <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
             <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>
             </div>
-          </div> -->
-
+          </div>
+           -->
+    
 
           
 
@@ -64,7 +81,7 @@
             <div class="task-actions">
             <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
             <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
-            <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon-shown"></i></button>
+
             </div>
           </div>
 

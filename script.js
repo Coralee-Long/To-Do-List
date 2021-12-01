@@ -3,6 +3,7 @@ window.addEventListener("load", () => {
   const input = document.querySelector("#add-task-input");
   const list_item = document.querySelector("#current-box");
   const defaultCurrent = document.querySelector("em");
+  const defaultBox = document.getElementById("default-current");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -15,6 +16,8 @@ window.addEventListener("load", () => {
       console.log("Success");
 
       defaultCurrent.style.display = "none";
+      defaultBox.style.display = "none";
+
       const task_el = document.createElement("div");
       task_el.classList.add("task");
 
@@ -26,7 +29,7 @@ window.addEventListener("load", () => {
       task_el_actions.classList.add("task-actions");
       task_el_actions.innerHTML = `<button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
             <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
-            <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>`;
+            <button class="button is-success is-small is-light" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>`;
 
       task_el.appendChild(task_el_text);
       task_el.appendChild(task_el_actions);
