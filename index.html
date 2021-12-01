@@ -1,162 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <script src="https://kit.fontawesome.com/8f821bd1b7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listee</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/Listee-logo-cropped.png" id="logo" />
+          <h1>a simple task list generator</h1>
 
-<body>
-    <main>
+    </header>
 
-
-    <!-- LOGO -->
-        <div class="columns is-centered" id='all-column'>
-
-            <div class="column is-mobile is-three-quarters " id="only-column">
-                <div id="logo-div">
-                    <img src="images/Listee-logo-cropped.png" alt="Listee Logo" id="logo">
-                </div>
-
-
-    <!-- ADD NEW TASK -->
-                <div class="column is-centered" id="add-task-section">
-
-                    <h1 id="add-task-text">Add new task:</h1>
-
-                    <div class="box" id="add-task-box">
-
-                        <input class="input is-large is-hovered" type="text" placeholder="Enter text here"
-                            id="enter-task-input">
-                        </input>
-
-                        <button class="button is-success is-medium is-pulled-right" id="add-task-button">
-                            <span>+ Add Task
-                            </span>
-                        </button>
-
-                        <br>
-                        <br>
-                        <br>
-
-                    </div>
-
-                </div>
-
-    <!-- CURRENT TASKS -->
-
-                <div class="column" id="current-tasks-section">
-
-                    <h1>Current tasks:</h1>
-
-                    <div class="box" id="current-tasks-box">
-
-            <!-- SAMPLE TASK START -->
-
-                        <div class="column" id="task-line-item">
-
-                            <div class="task-line-LH">
-
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-
-                                <h3 class="title is-3">Sample task</p>
-
-                            </div>
-                            <div class="task-line-RH">
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-                                <button class="button is-danger is-small" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-
-            <!-- SAMPLE TASK END -->
-
-                    </div>
-
-                </div>
-
-
-    <!-- COMPLETED TASKS -->
-                <div class="column" id="completed-tasks-section">
-
-                    <h1 id="completed-tasks-text">Completed tasks:</h1>
-
-                    <div class="box" id="completed-tasks-box">
-
-            <!-- SAMPLE TASK START -->
-
-                        <div class="column" id="task-line-item">
-
-                            <div class="task-line-LH">
-
-                                <button class="button is-success is-small" id="checkbox">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-check"></i>
-                                    </span>
-                                </button>
-
-                                <h3 class="title is-3">Sample task</p>
-
-                            </div>
-
-                            <div class="task-line-RH">
-
-                                <button class="button is-info is-small" id="edit-pen">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-marker"></i>
-                                    </span>
-                                </button>
-
-                                <button class="button is-danger is-small is-invert" id="delete">
-                                    <span class="icon is-small">
-                                        <i class="fa fa-trash"></i>
-                                    </span>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-
-
-            <!-- SAMPLE TASK END -->
-                    </div>
-                </div>
-            </div>
-    </main>
-
-    <!-- FOOTER -->
-
-    <footer class="footer sticky-bottom ">
-        <div class="has-text-centered">
-
-            <p style="color:#B0BDFF;">
-                © 2021 Listee
-            <ul>
-                <li style="color:#B0BDFF"> A Project by Coralee, Angela and Paul (Group 2)</li>
-            </ul>
-            </p>
-            
+    <main class="columns is-mobile">
+      <!-- ADD TASK -->
+      <section class="column" id="add-new">
+        <h2>Add new task:</h2>
+        <div class="" id="add-new-box">
+          <form id="add-task-form">
+            <input
+              type="text"
+              id="add-task-input"
+              placeholder="Type some text"
+            />
+            <input class="button is-success is-pulled-right" type="submit" id="add-task-submit" value="+Add Task" />
+          </form>
         </div>
+      </section>
+      <!-- CURRENT TASKS -->
+      <section class="column" id="current">
+       <div id="current-task-header"><h2>Current tasks:</h1><p>Completed?</p></div>
+        
+        <div class="" id="current-box">
+<em id="default-current">Please add your first task above to see it here</em>         
+<!-- 
+                  <div class="task">
+            <div class="task-text">
+              <p>Sample Task Text</p>
+            </div>
+            <div class="task-actions">
+            <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
+            <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>
+            </div>
+          </div> -->
+
+
+          
+
+        </div>
+      </section>
+      <!-- COMPLETED TASKS -->
+      <section class="column" id="completed">
+        <h2>Completed tasks:</h2>
+        <div class="" id="completed-box">
+
+        <div class="task">
+            <div class="task-text">
+              <p>Sample Task Text</p>
+            </div>
+            <div class="task-actions">
+            <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
+            <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon-shown"></i></button>
+            </div>
+          </div>
+
+          
+
+
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer sticky-bottom">
+      <p>  © 2021 Listee • 
+  A Project by Coralee, Angela and Paul (Group 2)</p>
     </footer>
-
-    <script src="https://kit.fontawesome.com/465eae0a2f.js" crossorigin="anonymous"></script>
-</body>
-
+        <script src="https://kit.fontawesome.com/465eae0a2f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+      </body>
 </html>

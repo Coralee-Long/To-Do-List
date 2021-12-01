@@ -3,43 +3,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Pacifico&display=swap");
 
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  /* border: 1px red solid; */
-}
-
-html {
-  height: 100%;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  /* border: 1px solid red; */
 }
 
 body {
   background: linear-gradient(#273fb6, #7487e8);
-}
-
-h1,
-h2 {
-  font-family: "Pacifico", "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  min-height: 100vh;
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-weight: 100;
+  font-family: "Open Sans";
   color: white;
+  font-size: 1rem;
 }
 
-h3 {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  color: #4356b1;
-  margin: 10px;
+h2 {
+  font-family: "Pacifico", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.2rem;
+  margin-bottom: 1px;
 }
 
-#logo-div {
+header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 3%;
   margin-bottom: 3%;
+  flex-grow: 1;
 }
 
 #logo {
@@ -48,74 +46,157 @@ h3 {
   max-width: 450px;
 }
 
-#add-task-button {
-  margin-top: 10px;
-  /* margin-bottom: 100px; */
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgb(34, 172, 34);
+main {
+  display: flex-fluid;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 800px;
+  flex-grow: 2;
 }
 
-.button {
-  margin-right: 4px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
 }
 
 .box {
-  /* max-width: 800px; */
-  margin-top: 5px;
-  margin-bottom: 2px;
+  width: 90%;
 }
 
-.tasks-flex {
-  display: flex;
-  justify-content: center;
-  padding: 20px 40px;
-}
-
-#current-tasks-box {
-  /* width: 50%;
-  padding: 20px 40px; */
-}
-
-#completed-tasks-box {
-  /* width: 50%;
-  padding: 20px 40px; */
-  background-color: #b0bdff;
-}
-
-#task-line-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.task-line-LH,
-.task-line-RH {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* background: grey; */
-}
-/* 
-.task-line-LH p {
-  padding-left: 15px;
-} */
-
-#add-task-box {
-  background-color: #acff9f;
-}
-
-#completed-tasks-text {
-  color: #b0bdff;
-}
-
-#add-task-text {
+#add-new h2 {
   color: #acff9f;
 }
 
+#add-new-box {
+  background-color: #acff9f;
+}
+
+#current h2 {
+  color: white;
+}
+
+#current-box {
+  background-color: white;
+}
+
+#completed h2 {
+  color: #b0bdff;
+}
+
+#completed-box {
+  background-color: #b0bdff;
+}
+
+#add-new-box,
+#current-box,
+#completed-box {
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+#add-task-input {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #bbb;
+  padding: 10px 20px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+#add-task-submit {
+  border: 1px solid rgb(82, 177, 82);
+  margin: 10px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.39);
+}
+
+#current-task-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+
+#current-task-header p {
+  letter-spacing: 1px;
+}
+
+em {
+  display: block;
+  color: rgb(222, 97, 97);
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 5px;
+}
+
+.task-text {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+#edit {
+  margin-right: 2px;
+  opacity: 0.5;
+}
+
+#delete {
+  margin-right: 25px;
+  opacity: 0.5;
+}
+
+#checkbox {
+  margin-right: 10px;
+  border: 1px solid rgba(0, 128, 0, 0.543);
+}
+#checkbox-icon {
+  opacity: 0;
+  /* border: 1px solid red; */
+}
+
+#checkbox-icon-shown {
+  opacity: 1;
+  /* border: 1px solid red; */
+}
+
+#checkbox:hover {
+  background-color: rgb(58, 179, 122);
+  /* border: 1px solid red; */
+}
+
+/* FOOTER */
 .footer {
   background-color: #4356b1 !important;
+  width: 100%;
+}
+
+footer p {
+  color: #b0bdff;
+  text-align: center;
+  flex-shrink: 1;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .task-text,
+  #add-task-input {
+    font-size: 1.2rem;
+  }
 }
