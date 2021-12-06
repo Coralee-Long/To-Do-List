@@ -3,47 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Listee</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
     <header>
-      <img
-        class="top-logo"
-        src="images/Listee-logo-cropped.png"
-        alt="Listee Logo"
-      />
+      <img src="images/Listee-logo-cropped.png" id="logo" />
+          <h1>a simple task list generator</h1>
+
     </header>
 
-    <main>
-      <div class="columns">
-        <div class="column" id="main-column">
-          <!-- <div class="column" id="add-task-text">ADD NEW TASK:</div> -->
-          <div class="box" id="add-task-box">
-            ADD NEW TASK
-            <div class="input" type="text" placeholder="Enter text here">
-              Enter text here
+    <main class="columns is-mobile">
+      <!-- ADD TASK -->
+      <section class="column" id="add-new">
+        <h2>Add new task:</h2>
+        <div class="" id="add-new-box">
+          <form id="add-task-form">
+            <input
+              type="text"
+              id="add-task-input"
+              placeholder="Type some text"
+            />
+            <div id="add-task-button-box">
+            <input class="button is-success" type="submit" id="add-task-submit" value="+Add Task" />
             </div>
-            <button class="button is-success">+ Add Task</button>
-          </div>
-          <div class="box" id="current-tasks-box">
-            CURRENT TASKS
-            <p>Sample task</p>
-            <p>Sample task</p>
-            <p>Sample task</p>
-          </div>
-          <div class="box" id="completed-tasks-box">
-            COMPLETED TASKS:
-            <p>Sample task</p>
-            <p>Sample task</p>
-            <p>Sample task</p>
-          </div>
+          </form>
         </div>
-      </div>
-    </main>
+      </section>
+      <!-- CURRENT TASKS -->
+      <section class="column" id="current">
+       <div id="current-task-header"><h2>Current tasks:</h1><p>Completed?</p></div>
+        
+        <div class="current-box" id="current-box">
+          <div class="task" id="default-current">
+<em>Please add your first task above to see it here</em></div>         
 
-    <footer></footer>
-  </body>
+            <!-- <div class="task">
+            <div class="task-text">
+              <p>Sample Task Text</p>
+            </div>
+            <div class="task-actions">
+
+            <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
+            <button class="button is-success is-small is-light" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>
+
+            </div>
+          </div> -->
+
+                      <!-- <div class="task">
+            <div class="task-text">
+              <p>Sample Task this is it Text sample task text</p>
+            </div>
+            <div class="task-actions">
+            <button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
+            <button class="button is-success is-small" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>
+            </div>
+          </div>
+           -->
+    
+
+        </div>
+      </section>
+      <!-- COMPLETED TASKS -->
+      <section class="column" id="completed">
+        <h2>Completed tasks:</h2>
+        <div class="" id="completed-box">
+
+        <div class="task">
+            <div class="task-text">
+              <p>Sample Task Text</p>
+            </div>
+            <div class="task-actions">
+            <button class="button is-info is-small is-light" id="edit"><i class="far fa-edit"></i></button>
+            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash-alt"></i></button>
+
+            </div>
+          </div>
+
+          
+
+
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer sticky-bottom">
+      <p>  © 2021 Listee • 
+  A Project by Coralee, Angela and Paul (Group 2)</p>
+    </footer>
+        <script src="https://kit.fontawesome.com/465eae0a2f.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+      </body>
 </html>
