@@ -1,7 +1,7 @@
 const Local_Storage_Key = "task.storage";
 let storage = JSON.parse(localStorage.getItem(Local_Storage_Key)) || [];
 
-function render() {
+function renderSave() {
 	save();
 	render();
 }
