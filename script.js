@@ -15,28 +15,101 @@ window.addEventListener("load", () => {
     } else {
       console.log("Success");
 
-      defaultCurrent.style.display = "none";
+      defaultCurrent.style.visibility = "none";
       defaultBox.style.display = "none";
 
+      //Create .task div 
       const task_el = document.createElement("div");
       task_el.classList.add("task");
 
-      const task_el_text = document.createElement("div");
-      task_el_text.classList.add("task-text");
-      task_el_text.innerText = task;
+      //Create .task-check div 
+      const taskCheckDiv = document.createElement("div");
+      taskCheckDiv.classList.add("task-check");
 
-      const task_el_actions = document.createElement("div");
-      task_el_actions.classList.add("task-actions");
-      task_el_actions.innerHTML = `<button class="button is-info is-small is-light" id="edit"><i class="fas fa-marker"></i></button>
-            <button class="button is-danger is-small is-light" id="delete"><i class="fas fa-trash"></i></button>
-            <button class="button is-success is-small is-light" id="checkbox"><i class="fas fa-check" id="checkbox-icon"></i></button>`;
+      task_el.appendChild(taskCheckDiv);
 
-      task_el.appendChild(task_el_text);
-      task_el.appendChild(task_el_actions);
+       // Creating .checkbox button
+      const task_checkbox_el = document.createElement("button");
+      task_checkbox_el.classList.add("checkbox");
 
-      list_item.appendChild(task_el);
+      // Creating checkbox icon
+      const task_checkbox_icon_el = document.createElement("i");
+      task_checkbox_icon_el.className = "fas fa-check fa-lg";
 
-      input.value = "";
-    }
+      // Creating Text Input
+      const task_input_el = document.createElement("input");
+        task_input_el.classList.add("text");
+        task_input_el.type = "text";
+        task_input_el.value = task;
+        task_input_el.setAttribute("readonly", "readonly");
+
+      //Appending Children
+      taskCheckDiv.appendChild(task_checkbox_el);
+      taskCheckDiv.appendChild(task_input_el);
+      task_checkbox_el.appendChild(task_checkbox_icon_el);
+      
+
+      // Creating .actions div
+      const task_actions_el = document.createElement("div");
+      task_actions_el.classList.add("actions");
+
+      // Creating .edit button
+      const task_edit_el = document.createElement("button");
+      task_edit_el.classList.add("edit");
+
+      // Creating edit icon
+      const task_edit_icon_el = document.createElement("i");
+      task_edit_icon_el.className = "fas fa-edit fa-lg";
+
+      // Creating .delete button
+      const task_delete_el = document.createElement("button");
+      task_delete_el.classList.add("delete-me");
+
+      // Creating delete icon
+      const task_delete_icon_el = document.createElement("i");
+      task_delete_icon_el.className = "fas fa-trash-alt fa-lg";
+
+      // Appending children to parent:
+      task_actions_el.appendChild(task_edit_el);
+      task_edit_el.appendChild(task_edit_icon_el);
+
+      // Appending children to parent:
+      task_actions_el.appendChild(task_delete_el);
+      task_delete_el.appendChild(task_delete_icon_el);
+
+ 
+
+ // Appending .actions to .task parent
+ task_el.appendChild(task_actions_el);
+
+ // Appending .task to .list (#tasks) parent
+ list_item.appendChild(task_el);
+
+ input.value = "";
+
+ task_edit_el.addEventListener('click', () => {
+     if (task_edit_el.innerHTML.includes('fa-edit')) {
+         task_input_el.removeAttribute("readonly");
+         task_input_el.focus();
+         task_edit_el.innerHTML = `<i class="fas fa-save fa-lg"></i>`;
+     }
+     else {
+         task_edit_el.innerHTML = `<i class="fas fa-edit fa-lg"></i>`
+         task_input_el.setAttribute("readonly", "readonly");
+     }
+ });
+
+ task_delete_el.addEventListener('click', () => {
+  list_item.removeChild(task_el);
+  
+ 
+  
+  
+ });
+    };
+  
+
+
   });
+
 });
