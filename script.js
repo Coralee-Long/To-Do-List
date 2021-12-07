@@ -120,9 +120,6 @@ window.addEventListener("load", () => {
   let completedBox = document.querySelector("#completed-box");
   completedBox.appendChild(removedChild);
  })
-
-
-    };
-  
+    
   });
 });
