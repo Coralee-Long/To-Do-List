@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   const list_item = document.querySelector("#current-box");
   const defaultCurrent = document.querySelector("em");
   const defaultBox = document.getElementById("default-current");
+  const defaultCompletedBox = document.getElementById("default-completed")
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -31,6 +32,7 @@ window.addEventListener("load", () => {
        // Creating .checkbox button
       const task_checkbox_el = document.createElement("button");
       task_checkbox_el.classList.add("checkbox");
+      // console.log(task_checkbox_el)
 
       // Creating checkbox icon
       const task_checkbox_icon_el = document.createElement("i");
@@ -101,11 +103,19 @@ window.addEventListener("load", () => {
 
  task_delete_el.addEventListener('click', () => {
   list_item.removeChild(task_el);
-  
- 
-  
-  
  });
+
+//  Move checked item to "completed" box:
+
+ task_checkbox_el.addEventListener('click', () => {
+   const removedChild = list_item.removeChild(task_el);
+   console.log(removedChild);
+   defaultCompletedBox.style.display = "none";
+  let completedBox = document.querySelector("#completed-box");
+  completedBox.appendChild(removedChild);
+ })
+
+
     };
   
 
