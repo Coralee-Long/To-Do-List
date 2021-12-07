@@ -109,7 +109,7 @@ window.addEventListener("load", () => {
           list_item.removeChild(task_el);
         }
       });
-    }
+    
 
 //  Move checked item to "completed" box:
 
@@ -119,8 +119,7 @@ window.addEventListener("load", () => {
    defaultCompletedBox.style.display = "none";
   let completedBox = document.querySelector("#completed-box");
   completedBox.appendChild(removedChild);
- })
-      };
-
+ });
+      }
   });
 });
