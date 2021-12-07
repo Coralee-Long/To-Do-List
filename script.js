@@ -15,7 +15,6 @@ window.addEventListener("load", () => {
       alert(`\n\n\n****** PLEASE ADD A TASK OR IT WON'T WORK!!!! ******\n\n`);
     } else {
       console.log("Success");
-      // console.log(list_item.childElementCount);
 
       defaultCurrent.style.visibility = "none";
       defaultBox.style.display = "none";
