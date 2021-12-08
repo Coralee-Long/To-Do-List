@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   const list_item = document.querySelector("#current-box");
   const defaultCurrent = document.querySelector("em");
   const defaultBox = document.getElementById("default-current");
+  const defaultCompletedBox = document.getElementById("default-completed")
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -18,19 +19,20 @@ window.addEventListener("load", () => {
       defaultCurrent.style.visibility = "none";
       defaultBox.style.display = "none";
 
-      //Create .task div 
+      //Create .task div
       const task_el = document.createElement("div");
       task_el.classList.add("task");
 
-      //Create .task-check div 
+      //Create .task-check div
       const taskCheckDiv = document.createElement("div");
       taskCheckDiv.classList.add("task-check");
 
       task_el.appendChild(taskCheckDiv);
 
-       // Creating .checkbox button
+      // Creating .checkbox button
       const task_checkbox_el = document.createElement("button");
       task_checkbox_el.classList.add("checkbox");
+      // console.log(task_checkbox_el)
 
       // Creating checkbox icon
       const task_checkbox_icon_el = document.createElement("i");
@@ -38,16 +40,15 @@ window.addEventListener("load", () => {
 
       // Creating Text Input
       const task_input_el = document.createElement("input");
-        task_input_el.classList.add("text");
-        task_input_el.type = "text";
-        task_input_el.value = task;
-        task_input_el.setAttribute("readonly", "readonly");
+      task_input_el.classList.add("text");
+      task_input_el.type = "text";
+      task_input_el.value = task;
+      task_input_el.setAttribute("readonly", "readonly");
 
       //Appending Children
       taskCheckDiv.appendChild(task_checkbox_el);
       taskCheckDiv.appendChild(task_input_el);
       task_checkbox_el.appendChild(task_checkbox_icon_el);
-      
 
       // Creating .actions div
       const task_actions_el = document.createElement("div");
@@ -77,39 +78,46 @@ window.addEventListener("load", () => {
       task_actions_el.appendChild(task_delete_el);
       task_delete_el.appendChild(task_delete_icon_el);
 
- 
 
- // Appending .actions to .task parent
- task_el.appendChild(task_actions_el);
+      // Appending .actions to .task parent
+      task_el.appendChild(task_actions_el);
 
- // Appending .task to .list (#tasks) parent
- list_item.appendChild(task_el);
+      // Appending .task to .list (#tasks) parent
+      list_item.appendChild(task_el);
 
- input.value = "";
+      input.value = "";
 
- task_edit_el.addEventListener('click', () => {
-     if (task_edit_el.innerHTML.includes('fa-edit')) {
-         task_input_el.removeAttribute("readonly");
-         task_input_el.focus();
-         task_edit_el.innerHTML = `<i class="fas fa-save fa-lg"></i>`;
-     }
-     else {
+      task_edit_el.addEventListener('click', () => {
+      if (task_edit_el.innerHTML.includes('fa-edit')) {
+          task_input_el.removeAttribute("readonly");
+          task_input_el.focus();
+          task_edit_el.innerHTML = `<i class="fas fa-save fa-lg"></i>`;
+      } else {
          task_edit_el.innerHTML = `<i class="fas fa-edit fa-lg"></i>`
          task_input_el.setAttribute("readonly", "readonly");
      }
+    });
+
+      task_delete_el.addEventListener("click", () => {
+        console.log(list_item.childElementCount);
+        if (list_item.childElementCount == 2) {
+          defaultCurrent.style.visibility = "block";
+          defaultBox.style.display = "block";
+          list_item.removeChild(task_el);
+        } else {
+          list_item.removeChild(task_el);
+        }
+      });
+    
+//  Move checked item to "completed" box:
+
+    task_checkbox_el.addEventListener('click', () => {
+    const removedChild = list_item.removeChild(task_el);
+    console.log(removedChild);
+     defaultCompletedBox.style.display = "none";
+    let completedBox = document.querySelector("#completed-box");
+    completedBox.appendChild(removedChild);
  });
-
- task_delete_el.addEventListener('click', () => {
-  list_item.removeChild(task_el);
-  
- 
-  
-  
- });
-    };
-  
-
-
+   }
   });
-
 });
