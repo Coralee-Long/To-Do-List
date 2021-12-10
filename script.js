@@ -42,6 +42,9 @@ if(completed_items.childElementCount < 1){
       // Creating .checkbox button
       const task_checkbox_el = document.createElement("button");
       task_checkbox_el.classList.add("checkbox");
+      task_checkbox_el.setAttribute('id','checkboxID');
+
+
       // console.log(task_checkbox_el)
 
       // Creating checkbox icon

@@ -200,6 +200,11 @@ button {
   /* border: 1px solid red; */
 }
 
+#completed-box .task .task-check #checkboxID {
+  display: none;
+}
+
+
 /* FOOTER */
 .footer {
   background-color: #4356b1 !important;
@@ -289,6 +294,10 @@ footer p {
   #add-task-input {
     font-size: 1.2rem;
   }
+.actions {
+  width: 100%;
+  margin-top: 5px;
+}
 
   .task-actions {
     justify-content: space-around;
@@ -302,6 +311,9 @@ footer p {
   #completed-box {
     background-color: rgba(255, 255, 255, 0);
   }
+
+
+
 
   #completed-box .task {
     background-color: #b0bdff;
@@ -320,6 +332,7 @@ footer p {
     background-color: rgba(225, 115, 115, 0.151);
     width: 49%;
     border-radius: 3px;
+    margin: 1px;
   }
   
   .delete-me:hover {
@@ -334,7 +347,8 @@ footer p {
     background-color: #132a9b1f;
     width: 49%;
     border-radius: 3px;
-  
+    margin: 1px;
+
   }
   
   .edit:hover {
