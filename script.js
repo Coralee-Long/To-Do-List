@@ -2,9 +2,19 @@ window.addEventListener("load", () => {
   const form = document.querySelector("#add-task-form");
   const input = document.querySelector("#add-task-input");
   const list_item = document.querySelector("#current-box");
+  const completed_items = document.querySelector("#completed-box");
   const defaultCurrent = document.querySelector("em");
   const defaultBox = document.getElementById("default-current");
   const defaultCompletedBox = document.getElementById("default-completed")
+
+
+if(list_item.childElementCount < 1){
+  defaultBox.style.display = 'block';
+}
+
+if(completed_items.childElementCount < 1){
+  defaultCompletedBox.style.display = 'block';
+}
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -98,8 +108,10 @@ window.addEventListener("load", () => {
      }
     });
 
-      task_delete_el.addEventListener("click", () => {
-        console.log(list_item.childElementCount);
+      task_delete_el.addEventListener("click", (e) => {
+        
+       
+
         if (list_item.childElementCount == 2) {
           defaultCurrent.style.visibility = "block";
           defaultBox.style.display = "block";
@@ -107,16 +119,30 @@ window.addEventListener("load", () => {
         } else {
           list_item.removeChild(task_el);
         }
+
+        if(list_item.childElementCount < 1){
+          defaultBox.style.display = 'block';
+        }
+        
       });
     
 //  Move checked item to "completed" box:
 
     task_checkbox_el.addEventListener('click', () => {
     const removedChild = list_item.removeChild(task_el);
-    console.log(removedChild);
+    // console.log(removedChild);
      defaultCompletedBox.style.display = "none";
+
+     if(list_item.childElementCount < 2){
+     defaultBox.style.display = 'block';
+    }
+
     let completedBox = document.querySelector("#completed-box");
+    
     completedBox.appendChild(removedChild);
+
+
+    
  });
    }
   });
