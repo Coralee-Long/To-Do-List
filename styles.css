@@ -263,13 +263,13 @@ footer p {
   em {
     padding: 10px;
     text-align: center;
-    color: rgb(255, 126, 148);
+    /* color: rgb(255, 126, 148); */
   }
 
   .task {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -291,8 +291,10 @@ footer p {
   }
 
   .task-actions {
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
+    margin-top: 5px;
+
     /* border-top: 1px solid #eee; */
     /* padding-top: 3px; */
   }
@@ -311,7 +313,48 @@ footer p {
   #checkbox {
     width: 100%;
   }
+
+  .delete-me {
+    color: rgb(225, 115, 115);
+    padding: 1em;
+    background-color: rgba(225, 115, 115, 0.151);
+    width: 49%;
+    border-radius: 3px;
+  }
+  
+  .delete-me:hover {
+    background-color: rgba(225, 115, 115, 0.228);
+  
+  }
+  
+  .edit {
+    color: #7487e8;
+    opacity: 0.8;
+    padding: 1em;
+    background-color: #132a9b1f;
+    width: 49%;
+    border-radius: 3px;
+  
+  }
+  
+  .edit:hover {
+    color: #132a9b;
+    background-color: #132a9b3a;
+  }
+  
+  .task-check {
+    width: 100%;
+    align-self: flex-start;
+    margin: 3px 0px;
+    /* border: 1px solid red; */
+  }
+
+
 }
+
+
+
+
 
 /* EXTRA STYLINGS - Coralee  -----------------> */
 
@@ -350,6 +393,8 @@ footer p {
 .delete-me {
   color: rgb(225, 115, 115);
   padding: 1em;
+  /* background-color: rgba(225, 115, 115, 0.151);
+  width: 50%; */
 }
 
 .delete-me:hover {
